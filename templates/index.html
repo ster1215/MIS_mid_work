@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>林冠廷的 Python 網頁</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            background-color: #1e1e1e;
+            background-image: url('https://www.svgbackgrounds.com/wp-content/uploads/2021/05/topography.svg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', 'Helvetica', sans-serif;
+        }
+
+        .navbar {
+            background-color: rgba(44, 44, 44, 0.95);
+        }
+
+        .menu-icon {
+            font-size: 24px;
+            color: #cccccc;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .menu-icon:hover {
+            transform: scale(1.1);
+            color: #ffffff;
+        }
+
+        .card {
+            background-color: rgba(44, 44, 44, 0.95);
+            border: none;
+        }
+
+        .nav-link {
+            color: #cccccc;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover {
+            color: #ffffff;
+        }
+
+        .nav-link i {
+            margin-right: 8px;
+        }
+
+        .slide-down {
+            animation: slideDown 0.4s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-10%); opacity: 0; }
+            to   { transform: translateY(0); opacity: 1; }
+        }
+
+        .title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-top: 80px;
+            color: #ffffff;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        }
+
+        .lead {
+            color: #b0b0b0;
+        }
+
+        /* 漸層圓形 */
+       
+        .info-box {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 20px 0;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .info-box:hover {
+            background-color: rgba(255, 255, 255, 0.12);
+        }
+        
+        .info-content {
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        
+        .info-box:hover .info-content {
+            opacity: 1;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <!-- 導覽列 -->
+    <nav class="navbar px-3 justify-content-between">
+        <a class="navbar-brand text-light">個人簡介</a>
+        <span class="menu-icon" data-bs-toggle="collapse" data-bs-target="#menuContent">
+            <i class="fas fa-bars"></i>
+        </span>
+    </nav>
+
+    <!-- 折疊選單 -->
+    <div class="collapse" id="menuContent">
+        <div class="card card-body slide-down">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="/"><i class="fas fa-laptop-code"></i>個人簡介</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/interest"><i class="fas fa-clock"></i>興趣何倫碼</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/work"><i class="fas fa-user"></i>相關工作</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Resume"><i class="fas fa-smile"></i>個人履歷</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 內容 -->
+    <div class="container text-center">
+        <h1 class="title">歡迎來到我的個人網頁</h1>
+        <img src="./static/head.jpg" width="10%">
+        <p class="lead">這裡是我分享關於自己的地方，歡迎參觀！</p>
+        
+        <!-- 個人簡介 -->
+        <div class="info-box">
+            <h2 class="text-white">👤 個人簡介</h2>
+            <div class="info-content lead">
+                我是林冠廷，一位熱愛科技與創新的人，擅長 Python 程式開發，喜歡將想法轉化成實際的作品，目前就讀資管系4B
+            </div>
+        </div>
+
+    
+        <!-- 興趣 -->
+        <div class="info-box">
+            <h2 class="text-white">🎯 興趣</h2>
+            <div class="info-content lead">
+                - 喜歡挑戰各種邏輯題與解謎遊戲<br>
+                - 熱衷於學習最新技術，如 AI、資料分析<br>
+                - 假日喜歡看書，體會人生百態
+            </div>
+        </div>
+    
+        <!-- 專長 -->
+        <div class="info-box">
+            <h2 class="text-white">💡 專長</h2>
+            <div class="info-content lead">
+                - Python 開發<br>
+                - 前端技術<br>
+                - Git 版本控制與團隊協作<br>
+                - 數據處理與資料視覺化
+            </div>
+        </div>
+    </div>
+    
+
+
+    <!-- 漸層圓形 -->
+    <div class="gradient-circle"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

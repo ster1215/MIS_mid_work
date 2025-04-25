@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <title>工作分析</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        body {
+            background-color: #1e1e1e;
+            background-image: url('https://www.svgbackgrounds.com/wp-content/uploads/2021/05/topography.svg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', 'Helvetica', sans-serif;
+        }
+
+        .navbar {
+            background-color: rgba(44, 44, 44, 0.95);
+        }
+
+        .menu-icon {
+            font-size: 24px;
+            color: #cccccc;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+
+        .menu-icon:hover {
+            transform: scale(1.1);
+            color: #ffffff;
+        }
+
+        .card {
+            background-color: rgba(44, 44, 44, 0.95);
+            border: none;
+        }
+
+        .nav-link {
+            color: #cccccc;
+            transition: color 0.2s;
+        }
+
+        .nav-link:hover {
+            color: #ffffff;
+        }
+
+        .nav-link i {
+            margin-right: 8px;
+        }
+
+        .slide-down {
+            animation: slideDown 0.4s ease-out;
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-10%); opacity: 0; }
+            to   { transform: translateY(0); opacity: 1; }
+        }
+
+        .title {
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-top: 80px;
+            color: #ffffff;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        }
+
+        .lead {
+            color: #b0b0b0;
+        }
+
+        /* 漸層圓形 */
+       
+        .info-box {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 20px 0;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        
+        .info-box:hover {
+            background-color: rgba(255, 255, 255, 0.12);
+        }
+        
+        .info-content {
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        
+        .info-box:hover .info-content {
+            opacity: 1;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <!-- 導覽列 -->
+    <nav class="navbar px-3 justify-content-between">
+        <a class="navbar-brand text-light">工作分析</a>
+        <span class="menu-icon" data-bs-toggle="collapse" data-bs-target="#menuContent">
+            <i class="fas fa-bars"></i>
+        </span>
+    </nav>
+
+    <!-- 折疊選單 -->
+    <div class="collapse" id="menuContent">
+        <div class="card card-body slide-down">
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link" href="/"><i class="fas fa-laptop-code"></i>個人簡介</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/interest"><i class="fas fa-clock"></i>興趣何倫碼</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/work"><i class="fas fa-user"></i>相關工作</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/Resume"><i class="fas fa-smile"></i>個人履歷</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 內容 -->
+    <div class="container text-center">
+        <h1 class="title">工作分析</h1>
+        <p class="lead">無障礙開發者</p>
+        
+        <!-- 個人簡介 -->
+        <div class="info-box">
+            <h2 class="text-white">無障礙開發者的職責：</h2>
+            <div class="info-content lead">
+              1.提升網站的可訪問性：確保網站對於視障、聽障、肢體障礙及認知障礙的使用者友好。<br>
+
+              2.設計無障礙介面：使用適合不同需求的配色、標籤、控制項和導航方式。<br>
+              
+              3.符合無障礙標準：遵循 Web Content Accessibility Guidelines（WCAG）和其他相關標準。<br>
+              
+              4.測試與反饋：與使用者進行互動，根據反饋不斷改進系統。<br>
+            </div>
+        </div>
+
+    
+        <!-- 興趣 -->
+        <div class="info-box">
+            <h2 class="text-white">需要的技能：</h2>
+            <div class="info-content lead">
+                1.-HTML 和 CSS：基礎的網頁設計語言，用來創建可訪問的結構。<br>
+
+                2.JavaScript：用於增強互動和動態內容的可訪問性。<br>
+                
+                3.ARIA（Accessible Rich Internet Applications）：為動態內容和複雜介面提供語義化標籤。<br>
+                
+                4.無障礙測試工具：例如 Axe、WAVE、Chrome 的 Lighthouse 等工具，用來檢查網站是否符合無障礙標準。<br>
+            </div>
+        </div>
+    
+        <!-- 專長 -->
+        <div class="info-box">
+            <h2 class="text-white">學習資源：</h2>
+            <div class="info-content lead">
+              1.Web Accessibility Initiative (WAI) - 這是 W3C 提供的官方無障礙資源：W3C WAI<br>
+
+              2.MDN Web Docs - 這裡有許多無障礙設計的指南：MDN Web Docs - Accessibility<br>
+              
+              3.在線課程：<br>
+              
+                -Udacity - Accessibility<br>
+              
+                -Coursera - Web Accessibility by University of South Australia<br>
+              
+              4.無障礙工具：<br>
+              
+               -Axe Accessibility<br>
+              
+               -WAVE Tool<br>
+            </div>
+        </div>
+      <div class="info-box">
+        <h2 class="text-white">實踐項目建議：</h2>
+        <div class="info-content lead">
+          1.為一個既有網站進行無障礙改善，並通過測試工具來檢查改善效果。<br>
+
+          2.創建一個完全無障礙的簡單網站，設計時專注於每一部分的可訪問性，並進行測試。<br>
+        </div>
+      </div>
+
+    </div>  
+    
+
+
+    <!-- 漸層圓形 -->
+    <div class="gradient-circle"></div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

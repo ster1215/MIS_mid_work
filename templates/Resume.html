@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>何倫瑪</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+		<style>
+			body {
+				background-color: #1e1e1e;
+				background-image: url('https://www.svgbackgrounds.com/wp-content/uploads/2021/05/topography.svg');
+				background-size: cover;
+				background-attachment: fixed;
+				background-repeat: no-repeat;
+				background-position: center;
+				color: #e0e0e0;
+				font-family: 'Segoe UI', 'Helvetica', sans-serif;
+			}
+	
+			.navbar {
+				background-color: rgba(44, 44, 44, 0.95);
+			}
+	
+			.menu-icon {
+				font-size: 24px;
+				color: #cccccc;
+				cursor: pointer;
+				transition: transform 0.2s ease;
+			}
+	
+			.menu-icon:hover {
+				transform: scale(1.1);
+				color: #ffffff;
+			}
+	
+			.card {
+				background-color: rgba(44, 44, 44, 0.95);
+				border: none;
+			}
+	
+			.nav-link {
+				color: #cccccc;
+				transition: color 0.2s;
+			}
+	
+			.nav-link:hover {
+				color: #ffffff;
+			}
+	
+			.nav-link i {
+				margin-right: 8px;
+			}
+	
+			.slide-down {
+				animation: slideDown 0.4s ease-out;
+			}
+	
+			@keyframes slideDown {
+				from { transform: translateY(-10%); opacity: 0; }
+				to   { transform: translateY(0); opacity: 1; }
+			}
+	
+			.title {
+				font-size: 2.5rem;
+				font-weight: 600;
+				margin-top: 80px;
+				color: #ffffff;
+				text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+			}
+	
+			.lead {
+				color: #b0b0b0;
+			}
+	
+			/* 漸層圓形 */
+		   
+			.info-box {
+				background-color: rgba(255, 255, 255, 0.05);
+				border-radius: 16px;
+				padding: 30px;
+				margin: 20px 0;
+				position: relative;
+				overflow: hidden;
+				cursor: pointer;
+				transition: background-color 0.3s ease;
+			}
+			
+			.info-box:hover {
+				background-color: rgba(255, 255, 255, 0.12);
+			}
+			
+			.info-content {
+				opacity: 0;
+				transition: opacity 0.5s ease;
+			}
+			
+			.info-box:hover .info-content {
+				opacity: 1;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<nav class="navbar px-3 justify-content-between">
+			<a class="navbar-brand text-light">個人履歷</a>
+			<span class="menu-icon" data-bs-toggle="collapse" data-bs-target="#menuContent">
+				<i class="fas fa-bars"></i>
+			</span>
+		</nav>
+	
+		<!-- 折疊選單 -->
+		<div class="collapse" id="menuContent">
+			<div class="card card-body slide-down">
+				<ul class="nav flex-column">
+					<li class="nav-item">
+						<a class="nav-link" href="/"><i class="fas fa-laptop-code"></i>個人簡介</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/interest"><i class="fas fa-clock"></i>興趣何倫碼</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/work"><i class="fas fa-user"></i>相關工作</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/Resume"><i class="fas fa-smile"></i>個人履歷</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	
+		<div class="info-box">
+            <h2 class="text-white">我未來想從事的工作 : 無障礙技術開發者</h2>
+            <div class="info-content lead">
+				原因 :<br>
+				從測驗結果發現自己屬於 SA 社會藝術型，自己在藝術方面有一定的實力，同時也很享受設計這件事情。<br>
+				接觸到 HTML 和網頁設計後，我發現自己對於將技術和創意結合，讓每個人都能順利使用網頁產生了強烈興趣。<br>
+				無障礙技術開發者能夠讓網站適應各種需求，特別是有特殊需求的使用者，這讓我對這個領域充滿了熱情。<br>
+            </div>
+        </div>
+		<div class="info-box">
+            <h2 class="text-white">工作內容 :</h2>
+            <div class="info-content lead">
+				無障礙技術開發者負責確保網站和應用程式對於所有使用者，包括視障、聽障、運動障礙及其他特殊需求的使用者，都能夠輕鬆訪問與操作。<br>
+				他們需遵守 Web Content Accessibility Guidelines (WCAG)，並進行測試來確保網頁符合無障礙標準。<br>
+				這包括設計可供螢幕閱讀器使用的元素、視覺輔助工具、調整色彩對比度、增強鍵盤導航等。<br>
+				無障礙開發者通常會和設計師、開發人員、測試人員協作，致力於打造更具包容性的數位環境。<br>
+            </div>
+        </div>
+		<div class="info-box">
+            <h2 class="text-white">如何充實自我 :</h2>
+            <div class="info-content lead">
+                1.深入學習無障礙設計原則與 WCAG，掌握最新的無障礙開發技術和工具。<br>
+
+				2.參加無障礙設計的培訓課程，或取得相關認證，例如 IAAP (International Association of Accessibility Professionals) 的 WCAG 認證。<br>
+
+				3.熟悉不同的輔助技術（如螢幕閱讀器、語音識別軟體等），並定期進行測試，確保自己設計的頁面能夠為所有使用者提供最佳體驗。<br>
+
+				4.持續關注無障礙領域的發展動態，並且參加相關的社群與活動，與其他專業人士交流經驗。<br>
+			</div>
+        </div>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+	</body>
+</html>

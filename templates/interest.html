@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>何倫瑪</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+		<style>
+			body {
+				background-color: #1e1e1e;
+				background-image: url('https://www.svgbackgrounds.com/wp-content/uploads/2021/05/topography.svg');
+				background-size: cover;
+				background-attachment: fixed;
+				background-repeat: no-repeat;
+				background-position: center;
+				color: #e0e0e0;
+				font-family: 'Segoe UI', 'Helvetica', sans-serif;
+			}
+	
+			.navbar {
+				background-color: rgba(44, 44, 44, 0.95);
+			}
+	
+			.menu-icon {
+				font-size: 24px;
+				color: #cccccc;
+				cursor: pointer;
+				transition: transform 0.2s ease;
+			}
+	
+			.menu-icon:hover {
+				transform: scale(1.1);
+				color: #ffffff;
+			}
+	
+			.card {
+				background-color: rgba(44, 44, 44, 0.95);
+				border: none;
+			}
+	
+			.nav-link {
+				color: #cccccc;
+				transition: color 0.2s;
+			}
+	
+			.nav-link:hover {
+				color: #ffffff;
+			}
+	
+			.nav-link i {
+				margin-right: 8px;
+			}
+	
+			.slide-down {
+				animation: slideDown 0.4s ease-out;
+			}
+	
+			@keyframes slideDown {
+				from { transform: translateY(-10%); opacity: 0; }
+				to   { transform: translateY(0); opacity: 1; }
+			}
+	
+			.title {
+				font-size: 2.5rem;
+				font-weight: 600;
+				margin-top: 80px;
+				color: #ffffff;
+				text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+			}
+	
+			.lead {
+				color: #b0b0b0;
+			}
+	
+			/* 漸層圓形 */
+		   
+			.info-box {
+				background-color: rgba(255, 255, 255, 0.05);
+				border-radius: 16px;
+				padding: 30px;
+				margin: 20px 0;
+				position: relative;
+				overflow: hidden;
+				cursor: pointer;
+				transition: background-color 0.3s ease;
+			}
+			
+			.info-box:hover {
+				background-color: rgba(255, 255, 255, 0.12);
+			}
+			
+			.info-content {
+				opacity: 0;
+				transition: opacity 0.5s ease;
+			}
+			
+			.info-box:hover .info-content {
+				opacity: 1;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<nav class="navbar px-3 justify-content-between">
+			<a class="navbar-brand text-light">興趣何倫碼</a>
+			<span class="menu-icon" data-bs-toggle="collapse" data-bs-target="#menuContent">
+				<i class="fas fa-bars"></i>
+			</span>
+		</nav>
+	
+		<!-- 折疊選單 -->
+		<div class="collapse" id="menuContent">
+			<div class="card card-body slide-down">
+				<ul class="nav flex-column">
+					<li class="nav-item">
+						<a class="nav-link" href="/"><i class="fas fa-laptop-code"></i>個人簡介</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/interest"><i class="fas fa-clock"></i>興趣何倫碼</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/work"><i class="fas fa-user"></i>相關工作</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="/Resume"><i class="fas fa-smile"></i>個人履歷</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	
+		<div class="info-box">
+            <h2 class="text-white">👤興趣何倫碼介紹：</h2>
+            <div class="info-content lead">
+                Holland 興趣測驗將人與環境分成六大類型：R-實作型、I-研究型、A-藝術型、S-社會型、E-企業型及C-事務型。你可以輸入興趣何倫碼前兩碼，來查詢適合你的職涯發展領域與相關職務。
+            </div>
+        </div>
+		<div class="info-box">
+            <h2 class="text-white">我的何倫瑪</h2>
+            <div class="info-content lead">
+                <img src="static/interest.jpg"><img src="static/interest2.png">
+            </div>
+        </div>
+		<div class="info-box">
+            <h2 class="text-white">適合的職業及該職業名人</h2>
+            <div class="info-content lead">
+                <img src="static/Profession.jpg"><img src="static/Profession2.jpg">
+            </div>
+        </div>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+	</body>
+</html>
